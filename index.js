@@ -17,6 +17,9 @@ mongoose
 app.use(express.json()); //pass incoming json data from the user
 //!Routes
 app.use("/", router);
+app.use("/test", (req, res) => {
+  res.send("Hello World");
+});
 //!error handler
 app.use(errorHandler);
 //! Start the server
